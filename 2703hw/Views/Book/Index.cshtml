@@ -1,0 +1,29 @@
+﻿@using _2703hw.ViewModels
+
+@model IEnumerable<Book>
+
+<h2>List of books</h2>
+
+<a href="Book/Add" class="btn btn-primary">Add book</a>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Genre</th>
+			<th>Year</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var book in Model)
+		{
+			<tr>
+				<th>@book.Title</th>
+				<th>@book.Author</th>
+				<th>@book.Genre</th>
+				<th>@book.Year</th>
+			</tr>
+		}
+	</tbody>
+</table>
